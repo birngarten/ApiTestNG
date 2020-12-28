@@ -31,6 +31,7 @@ public class Get04 {
             "employee_age": "64",
             "profile_image": ""        },
             3.tum employee_name'leri aliniz ve "Sonya Frost" isminin yer aldigini verify ediniz
+            4. employee_salary'si 300.000 den fazla kac kisi oldugunu bulup, verify ediniz
         */
         response = given().
                     when().
@@ -48,13 +49,30 @@ public class Get04 {
         softAssert.assertTrue(employeeList.get(16).get("profile_image").equals(""));
         softAssert.assertAll();
 
-        List<String>  names = new ArrayList<>();
-        for (Map<String,String> w: employeeList) {
-            names.add(w.get("employee_name"));
-        }
-//        System.out.println(names);
-        Assert.assertTrue(names.contains("Sonya Frost"));
+        List<String> nameList = new ArrayList<>();
+        List<String> salaryList = new ArrayList<>();
 
+        for(Map<String,String> w: employeeList){
+            nameList.add(w.get("employee_name"));
+            salaryList.add(w.get("employee_salary"));
+        }
+//        System.out.println(nameList);
+        Assert.assertTrue(nameList.contains("Sonya Frost"));
+
+//        4. employee_salary'si 300.000 den fazla kac kisi oldugunu bulup, verify ediniz
+        int count =0;
+        for (String w: salaryList){
+            int a = Integer.parseInt(w); //1.yol Strint to Integer
+            if (a>300000){
+//                System.out.println(a);
+                count++;
+//            int b = Integer.valueOf(w); //2.yol Strint to Integer
+            }
+        }
+        System.out.println(count); // 11
+        softAssert.assertEquals(count,11);
+        softAssert.assertAll();
+        }
     }
 
-}
+
