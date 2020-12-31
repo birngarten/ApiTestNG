@@ -1,4 +1,5 @@
 package tests;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.*;
@@ -11,10 +12,8 @@ import static io.restassured.RestAssured.*;
 public class Get05 {
     String entpoint = "http://dummy.restapiexample.com/api/v1/employee/1";
     Response response;
-    EmployeeFirst [] employeeFirst;
-    Data[] data;
-    ObjectMapper objectMapper;
     JsonPath json;
+
 
     /*"data": [
         {
@@ -30,17 +29,13 @@ public class Get05 {
         response = given().
                     when().
                         get(entpoint);
-//        response.prettyPrint();
+        response.prettyPrint();
 
-        json = response.jsonPath();
-
-        objectMapper = new ObjectMapper();
-        employeeFirst = objectMapper.readValue(response.toString(),EmployeeFirst[].class);
-        for (int i=0; i<employeeFirst.length; i++){
-            if(employeeFirst[i]!=null){
-                System.out.println(employeeFirst[i].getMessage());
-            }
+         json = response.jsonPath();
+        ObjectMapper objectMapper = new ObjectMapper();
+        EmployeeFirst [] employeeFirst= objectMapper.readValue(response.asString(),EmployeeFirst[].class);
+        System.out.println(employeeFirst[0].getMessage());
         }
 
     }
-}
+

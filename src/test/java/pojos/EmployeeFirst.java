@@ -1,5 +1,4 @@
 package pojos;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -20,10 +19,19 @@ public class EmployeeFirst {
     @JsonProperty("message")
     private String message;
 
+    /**
+     * No args constructor for use in serialization
+     *
+     */
     public EmployeeFirst() {
-
     }
 
+    /**
+     *
+     * @param data
+     * @param message
+     * @param status
+     */
     public EmployeeFirst(String status, Data data, String message) {
         super();
         this.status = status;
@@ -63,9 +71,7 @@ public class EmployeeFirst {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this).append("status", status).
-                                                append("data", data).
-                                                append("message", message).toString();
+        return new ToStringBuilder(this).append("status", status).append("data", data).append("message", message).toString();
     }
 
 }

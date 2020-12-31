@@ -25,9 +25,21 @@ public class Data {
     @JsonProperty("profile_image")
     private String profileImage;
 
+    /**
+     * No args constructor for use in serialization
+     *
+     */
     public Data() {
     }
 
+    /**
+     *
+     * @param employeeName
+     * @param employeeAge
+     * @param id
+     * @param profileImage
+     * @param employeeSalary
+     */
     public Data(Integer id, String employeeName, Integer employeeSalary, Integer employeeAge, String profileImage) {
         super();
         this.id = id;
@@ -89,11 +101,7 @@ public class Data {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this).append("id", id).
-                                               append("employeeName", employeeName).
-                                               append("employeeSalary", employeeSalary).
-                                               append("employeeAge", employeeAge).
-                                               append("profileImage", profileImage).toString();
+        return new ToStringBuilder(this).append("id", id).append("employeeName", employeeName).append("employeeSalary", employeeSalary).append("employeeAge", employeeAge).append("profileImage", profileImage).toString();
     }
 
 }
