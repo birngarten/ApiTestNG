@@ -1,4 +1,5 @@
 package pojos;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -101,7 +102,10 @@ public class Data {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this).append("id", id).append("employeeName", employeeName).append("employeeSalary", employeeSalary).append("employeeAge", employeeAge).append("profileImage", profileImage).toString();
+        return new ToStringBuilder(this).append("id", id).
+                                                append("employeeName", employeeName).
+                                                append("employeeSalary", employeeSalary).
+                                                append("employeeAge", employeeAge).
+                                                append("profileImage", profileImage).toString();
     }
-
 }
