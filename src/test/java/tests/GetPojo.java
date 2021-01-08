@@ -44,7 +44,7 @@ public class GetPojo {
                         get(entpoint);
 //         response.prettyPrint();
 
-         json = response.jsonPath();
+//         json = response.jsonPath();
          employee= objectMapper.readValue(response.asString(),Employee.class);
 
          String statusValue = employee.getStatus();
