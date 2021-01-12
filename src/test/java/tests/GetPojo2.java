@@ -11,6 +11,7 @@ import pojos.Employee;
 
 import java.io.IOException;
 
+
 import static io.restassured.RestAssured.*;
 
 public class GetPojo2 {
@@ -55,10 +56,19 @@ public class GetPojo2 {
 
         json = response.jsonPath();
         employee = objectMapper.readValue(response.asString(),Employee.class);
-        System.out.println(employee.getData().getId());
 
 //         3. asagidaki TC'yi pojo class'i ile verilerini alip verify ediniz
-
+        String statusText = employee.getStatus();
+        softAssert.assertEquals(statusText,"success");
+        softAssert.assertTrue(employee.getData().getId()==2);
+        softAssert.assertEquals(employee.getData().getEmployeeName(),"Garrett Winters");
+        int salary = employee.getData().getEmployeeSalary();
+        softAssert.assertTrue(salary==170750);
+        int employee_Age = employee.getData().getEmployeeAge();
+        softAssert.assertTrue(employee_Age==63);
+        softAssert.assertEquals(employee.getData().getProfileImage(),"");
+        softAssert.assertEquals(employee.getMessage(),"Successfully! Record has been fetched.");
+        softAssert.assertAll();
 
 
 
