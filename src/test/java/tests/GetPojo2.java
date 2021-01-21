@@ -70,7 +70,5 @@ public class GetPojo2 {
         softAssert.assertEquals(employee.getMessage(),"Successfully! Record has been fetched.");
         softAssert.assertAll();
 
-
-
     }
 }
