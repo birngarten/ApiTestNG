@@ -49,8 +49,8 @@ public class Get02 {
                 assertThat().
                 statusCode(200).
                 contentType(ContentType.JSON).
-                body("firstname", equalTo("Susan"),
-                        "lastname", equalTo("Ericsson"),
+                body("firstname", equalTo("Sally"),
+                        "lastname", equalTo("Smith"),
                         "totalprice",equalTo(885),
                         "depositpaid",equalTo(false),
                         "bookingdates.checkin",equalTo("2020-06-08"),

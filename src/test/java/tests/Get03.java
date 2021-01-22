@@ -6,7 +6,10 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import static io.restassured.RestAssured.*;
 
 public class Get03 {
@@ -62,4 +65,5 @@ public class Get03 {
         Assert.assertTrue(maasi345000tenFazlaCalisanlar.contains("Yuri Berry"));
 
     }
+
 }

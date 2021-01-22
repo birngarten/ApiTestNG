@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.*;
 public class Post01 {
 
     String entpoint ="https://gorest.co.in/public-api/users/";
-    Map <String, String> postMapObje = new HashMap<>();
+    Map <String, Object> postMapObje = new HashMap<>();
 
     Response response;
 
@@ -53,9 +53,27 @@ public class Post01 {
     }
 
     @Test
-    public void postWithMap(){          // Bu method postMap() methodunun kalibini kullanarak post islemi yapiyor.
+    public void post02(){
+        String body = "{\n" +
+                "        \"name\": \"Iskender\",\n" +
+                "        \"email\": \"demiray13@emmerich.info\",\n" +
+                "        \"gender\": \"Male\",\n" +
+                "        \"status\": \"Active\"\n" +
+                "    }";
+        response = given().
+                contentType(ContentType.JSON).
+                auth().oauth2(ConfigurationReader.getProperty("token")).
+                body(body).
+                when().
+                post(entpoint);
+        response.prettyPrint();
+
+    }
+
+    @Test
+    public void postWithMap01(){          // Bu method postMap() methodunun kalibini kullanarak post islemi yapiyor.
         postMapObje.put("name","Hasan");                // post01() metodu ile ayni isleve sahip, ayni isi yapiyor
-        postMapObje.put("email","demo3@emmerich.info");
+        postMapObje.put("email","demof3@emmerich.info");
         postMapObje.put("gender","Male");
         postMapObje.put("status","Active");
         postMap(postMapObje);
@@ -63,4 +81,15 @@ public class Post01 {
 
     }
 
-}
+    @Test
+    public void postWithMap02(){
+        postMapObje.put("name","Huseyin");                // post01() metodu ile ayni isleve sahip, ayni isi yapiyor
+        postMapObje.put("email","demoqal333@emmerich.info");
+        postMapObje.put("gender","Male");
+        postMapObje.put("status","Active");
+        postMap(postMapObje);
+        response.prettyPrint();
+
+    }
+
+    }
