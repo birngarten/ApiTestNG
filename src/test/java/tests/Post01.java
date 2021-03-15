@@ -14,7 +14,6 @@ public class Post01 {
 
     String entpoint ="https://gorest.co.in/public-api/users/";
     Map <String, Object> postMapObje = new HashMap<>();
-
     Response response;
 
     public void postMap(Map mapbody){
@@ -36,6 +35,7 @@ public class Post01 {
 
     @Test
     public void post01(){
+//        1.YOL
         String body = "{\n" +
                 "        \"name\": \"Iskenderiye\",\n" +
                 "        \"email\": \"demir13@emmerich.info\",\n" +
@@ -70,15 +70,14 @@ public class Post01 {
 
     }
 
-    @Test
+    @Test // 2.YOL
     public void postWithMap01(){          // Bu method postMap() methodunun kalibini kullanarak post islemi yapiyor.
         postMapObje.put("name","Hasan");                // post01() metodu ile ayni isleve sahip, ayni isi yapiyor
         postMapObje.put("email","demof3@emmerich.info");
         postMapObje.put("gender","Male");
         postMapObje.put("status","Active");
         postMap(postMapObje);
-        response.prettyPrint();
-
+//        response.prettyPrint();
     }
 
     @Test
@@ -88,8 +87,7 @@ public class Post01 {
         postMapObje.put("gender","Male");
         postMapObje.put("status","Active");
         postMap(postMapObje);
-        response.prettyPrint();
+//        response.prettyPrint();
 
     }
-
-    }
+}

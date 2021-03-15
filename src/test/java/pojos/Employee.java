@@ -35,6 +35,7 @@ public class Employee {
 
     @JsonProperty("data")
     public Data getData() {
+
         return data;
     }
 

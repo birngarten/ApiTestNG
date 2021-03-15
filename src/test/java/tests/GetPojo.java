@@ -37,8 +37,9 @@ public class GetPojo {
         "profile_image": ""
     },
     "message": "Successfully! Record has been fetched."
+  }
     1. yukaridaki key'lerin karsisindaki datalari birer birer alip, verify ediniz.
-}     */
+    */
          response = given().
                     when().
                         get(entpoint);

@@ -51,10 +51,10 @@ public class GetPojo2 {
 //        2. statuscodunun 200 oldugu assert ediniz
         response.
                 then().
-                statusCode(200).
-                assertThat();
+                assertThat().
+                statusCode(200);
 
-        json = response.jsonPath();
+//        json = response.jsonPath();
         employee = objectMapper.readValue(response.asString(),Employee.class);
 
 //         3. asagidaki TC'yi pojo class'i ile verilerini alip verify ediniz
@@ -62,8 +62,7 @@ public class GetPojo2 {
         softAssert.assertEquals(statusText,"success");
         softAssert.assertTrue(employee.getData().getId()==2);
         softAssert.assertEquals(employee.getData().getEmployeeName(),"Garrett Winters");
-        int salary = employee.getData().getEmployeeSalary();
-        softAssert.assertTrue(salary==170750);
+        softAssert.assertTrue(employee.getData().getEmployeeSalary()==170750);
         int employee_Age = employee.getData().getEmployeeAge();
         softAssert.assertTrue(employee_Age==63);
         softAssert.assertEquals(employee.getData().getProfileImage(),"");

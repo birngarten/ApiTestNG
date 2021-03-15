@@ -7,11 +7,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "id",
-        "employee_name",
-        "employee_salary",
-        "employee_age",
-        "profile_image"
+
 })
 public class Data {
 
@@ -62,6 +58,7 @@ public class Data {
 
     @JsonProperty("employee_name")
     public String getEmployeeName() {
+
         return employeeName;
     }
 
