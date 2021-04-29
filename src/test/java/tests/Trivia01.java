@@ -78,17 +78,17 @@ public class Trivia01 {
 
         //2. YOL
         List<List<String>> inCorrectAnswerList = json.getList("results.incorrect_answers");
-        int count3 = 0;
+        int count = 0;
         for (List<String> w : inCorrectAnswerList) {
             Assert.assertTrue(w.size()==3);
 
             for (String i : w) {
-                if (i.isEmpty()) {
-                    count3++;
+                if (i.isEmpty()) { // null olmadigini dogrulayiniz
+                    count++;      // eger i bos olsaydi count artardi ve null olmadigi cikardi. Ama count artmadi.
                 }
             }
         }
-        Assert.assertTrue(count3==0);
+        Assert.assertTrue(count == 0);
 
 
 
