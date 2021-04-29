@@ -9,9 +9,6 @@ import org.testng.annotations.Test;
 import pojos.Money;
 
 import java.io.IOException;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.TreeMap;
 
 import static io.restassured.RestAssured.*;
 
