@@ -3,7 +3,8 @@ package tests;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.*;
 
-import org.junit.Assert;
+//import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 

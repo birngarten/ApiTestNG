@@ -2,11 +2,11 @@ package tests;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.junit.Assert;
+//import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.List;
 import java.util.Objects;
-
 import static io.restassured.RestAssured.given;
 
 public class Trivia01 {

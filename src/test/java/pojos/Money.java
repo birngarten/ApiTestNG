@@ -2,7 +2,8 @@ package pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.junit.platform.commons.util.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringBuilder;
+//import org.junit.platform.commons.util.ToStringBuilder;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Money {

@@ -2,10 +2,9 @@ package tests;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.junit.Test;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
