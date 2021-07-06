@@ -15,7 +15,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class EC_Bank_Get {
+public class Get_1_EC_Bank {
 
     String endpoint = "https://api.exchangeratesapi.io/latest";
     Response response;

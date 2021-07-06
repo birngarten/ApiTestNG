@@ -15,7 +15,7 @@ import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
 
-public class EC_Bank_Get03 {
+public class Get_3_EC_Bank {
 
     Response response;
     JsonPath json;

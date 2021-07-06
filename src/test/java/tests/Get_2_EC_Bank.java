@@ -13,7 +13,7 @@ import java.util.*;
 
 import static io.restassured.RestAssured.given;
 
-public class EC_Bank_Get02 {
+public class Get_2_EC_Bank {
     Response response;
     JsonPath json;
     String endpoint = "https://api.exchangeratesapi.io/2010-01-12";

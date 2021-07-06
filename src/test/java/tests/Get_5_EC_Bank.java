@@ -9,7 +9,7 @@ import java.util.*;
 
 import static io.restassured.RestAssured.*;
 
-public class EC_Bank_Get05 {
+public class Get_5_EC_Bank {
 
     String endpoint = "https://api.exchangeratesapi.io/history?start_at=2018-01-01&end_at=2018-09-01";
     Response response;

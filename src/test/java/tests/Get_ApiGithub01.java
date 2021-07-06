@@ -9,7 +9,7 @@ import java.util.*;
 
 import static io.restassured.RestAssured.given;
 
-public class ApiGithub_Get01 {
+public class Get_ApiGithub01 {
 
     String entpoint = "https://api.github.com/users";
     Response response;
